@@ -56,7 +56,7 @@ $(function () {
   $('#form_login').submit(function (e) {
     //阻止默认提交行为
     e.preventDefault()
-    console.log($(this).serialize())
+    // console.log($(this).serialize())
     $.ajax({
       url: '/api/login',
       type: 'post',
@@ -67,7 +67,7 @@ $(function () {
         }
         layer.msg('登录成功', { icon: 1 })
         //将登录成功的token 存到localstorage
-        console.log(res)
+        // console.log(res)
         localStorage.setItem('token', res.token)
         //跳转到首页
         location.href = '/index.html'
